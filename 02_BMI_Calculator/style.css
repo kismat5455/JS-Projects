@@ -64,10 +64,10 @@
 }
 
 #result {
-    margin-left: 650px;
+   
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 0 auto;
     color: blue;
     text-align: center;
     border: 1px solid black;
