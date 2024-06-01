@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unlimited Colors</title>
 </head>
+
 <body>
-    
+    <h1>Unlimited Colors</h1>
+    <p>Unlimited Colors is a simple web application that allows you to change background colors randomly when you click
+        the start button and stops changing the background color when you click the stop button.</p>
+
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        const start = document.getElementById('start');
+        const stop = document.getElementById('stop');
+        let intervalId;
+
+        start.addEventListener('click', () => {
+            intervalId = setInterval(() => {
+                document.body.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            }, 1000);
+        });
+
+        stop.addEventListener('click', () => {
+            clearInterval(intervalId);
+        });
+    </script>
+
+
 </body>
+
 </html>
