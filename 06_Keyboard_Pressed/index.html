@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Keyboard Button Pressed </title>
+</head>
+
+<body>
+    <h1>Which Keyboard Button Pressed</h1>
+
+    <p>Press any key on the keyboard to get the Unicode value of the key pressed to show the button pressed and Unicode
+        in a table structure</p>
+    <table border="1" style="margin:20px auto">
+        <tr>
+            <th>Key</th>
+            <th>Unicode</th>
+        </tr>
+        <tr>
+            <td id="key" width="100" height="60">No Key Pressed</td>
+            <td id="unicode" width="100" height="60">No Key Pressed</td>
+        </tr>
+
+
+
+
+
+        <script>
+
+
+            document.addEventListener('keydown', function (event) {
+
+
+                document.getElementById('key').innerText = event.key === " " ? "Space" : event.key;
+
+                //add this line to get the unicode value of the key pressed not captured like Ctrl, Shift, Alt, etc
+
+
+
+
+                document.getElementById('unicode').innerText = event.keyCode;
+            });
+
+
+        </script>
+
+</body>
+
+</html>
